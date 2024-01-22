@@ -44,51 +44,71 @@
         android:padding="20dp" />
 
     <LinearLayout
-        android:id="@+id/belowpart1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:id="@+id/part1"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
         android:layout_below="@+id/result"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         >
     <Button
         android:id="@+id/uparrow"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:layout_below="@+id/result"
         android:text="@string/uparrow"
+        android:onClick="onOperatorClick"
         android:background="@drawable/button_outline"
         />
-
-    <Button
-        android:id="@+id/division"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_below="@+id/result"
-        android:layout_toRightOf="@+id/uparrow"
-        android:text="@string/division"
-        android:background="@drawable/button_outline"/>
-
-    <Button
-        android:id="@+id/multiply"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:text="@string/multiply"
-        android:background="@drawable/button_outline"/>
-
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/belowpart2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/belowpart1">
 
     <Button
         android:id="@+id/num7"
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:text="@string/num7"
+        android:onClick="onDigitClick"
+        android:background="@drawable/button_outline"/>
+
+    <Button
+        android:id="@+id/num4"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:text="@string/num4"
+        android:onClick="onDigitClick"
+        android:background="@drawable/button_outline"/>
+
+
+        <Button
+            android:id="@+id/num1"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:text="@string/num1"
+            android:onClick="onDigitClick"
+            android:background="@drawable/button_outline"/>
+
+        <Button
+            android:id="@+id/modulo"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:text="@string/modulo"
+            android:onClick="onOperatorClick"
+            android:background="@drawable/button_outline"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/part2"
+        android:layout_below="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_toEndOf="@+id/part1"
+        android:orientation="vertical">
+
+    <Button
+        android:id="@+id/division"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:text="@string/division"
+        android:onClick="onOperatorClick"
         android:background="@drawable/button_outline"/>
 
     <Button
@@ -96,29 +116,7 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:text="@string/num8"
-        android:background="@drawable/button_outline"/>
-
-    <Button
-        android:id="@+id/num9"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:text="@string/num9"
-        android:background="@drawable/button_outline"/>
-
-
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/belowpart3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/belowpart2">
-    <Button
-        android:id="@+id/num4"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:text="@string/num4"
+        android:onClick="onDigitClick"
         android:background="@drawable/button_outline"/>
 
     <Button
@@ -126,6 +124,52 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:text="@string/num5"
+        android:onClick="onDigitClick"
+        android:background="@drawable/button_outline"/>
+
+        <Button
+            android:id="@+id/num2"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:text="@string/num2"
+            android:onClick="onDigitClick"
+            android:background="@drawable/button_outline"/>
+
+        <Button
+            android:id="@+id/num0"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:text="@string/num0"
+            android:onClick="onDigitClick"
+            android:background="@drawable/button_outline"
+            />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/part3"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/result"
+        android:layout_toEndOf="@+id/part2"
+        android:orientation="vertical">
+
+
+    <Button
+        android:id="@+id/multiply"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:text="@string/multiply"
+        android:onClick="onOperatorClick"
+        android:background="@drawable/button_outline"/>
+
+    <Button
+        android:id="@+id/num9"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:text="@string/num9"
+        android:onClick="onDigitClick"
         android:background="@drawable/button_outline"/>
 
     <Button
@@ -133,113 +177,79 @@
         android:layout_width="80dp"
         android:layout_height="80dp"
         android:text="@string/num6"
+        android:onClick="onDigitClick"
         android:background="@drawable/button_outline"/>
+
+        <Button
+            android:id="@+id/num3"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:text="@string/num3"
+            android:onClick="onDigitClick"
+            android:background="@drawable/button_outline"/>
+
+        <Button
+            android:id="@+id/point"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:text="@string/point"
+            android:onClick="onDigitClick"
+            android:background="@drawable/button_outline"/>
 
 
 
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/belowpart4"
+        android:id="@+id/part4"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/belowpart3">
-    <Button
-        android:id="@+id/num1"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:text="@string/num1"
-        android:background="@drawable/button_outline"/>
-
-    <Button
-        android:id="@+id/num2"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:text="@string/num2"
-        android:background="@drawable/button_outline"/>
-
-    <Button
-        android:id="@+id/num3"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:text="@string/num3"
-        android:background="@drawable/button_outline"/>
-
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/belowpart5"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/belowpart4">
-    <Button
-        android:id="@+id/modulo"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:text="@string/modulo"
-        android:background="@drawable/button_outline"/>
-
-    <Button
-        android:id="@+id/num0"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:text="@string/num0"
-        android:background="@drawable/button_outline"
-        />
-
-    <Button
-        android:id="@+id/point"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:text="@string/point"
-        android:background="@drawable/button_outline"/>
-
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/sidepart"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_alignRight="@+id/belowpart1"
+        android:layout_height="match_parent"
         android:layout_below="@+id/result"
-        >
+        android:layout_toEndOf="@+id/part3"
+        android:orientation="vertical">
+
+
         <Button
             android:id="@+id/clearbutton"
-            android:layout_width="120dp"
+            android:layout_width="match_parent"
             android:layout_height="80dp"
             android:text="@string/clear"
+            android:onClick="onClearClick"
             android:background="@drawable/button_outline"/>
 
         <Button
             android:id="@+id/cancelbutton"
-            android:layout_width="120dp"
-            android:layout_height="80dp"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
             android:text="@string/cancel"
+            android:onClick="backspaceClick"
             android:background="@drawable/button_outline"/>
 
         <Button
             android:id="@+id/subtract"
-            android:layout_width="120dp"
-            android:layout_height="80dp"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
             android:text="@string/subtract"
+            android:onClick="onOperatorClick"
             android:background="@drawable/button_outline"/>
 
         <Button
             android:id="@+id/add"
-            android:layout_width="120dp"
-            android:layout_height="80dp"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
             android:text="@string/add"
+            android:onClick="onOperatorClick"
             android:background="@drawable/button_outline"/>
 
         <Button
             android:id="@+id/equal"
-            android:layout_width="120dp"
-            android:layout_height="80dp"
-            android:text="@string/equal"
-            android:background="@drawable/button_outline"/>
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/button_outline"
+            android:onClick="onEqualClick"
+            android:text="@string/equal" />
+
+
 
     </LinearLayout>
 
